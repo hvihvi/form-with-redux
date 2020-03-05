@@ -10,8 +10,12 @@ export type Action =
   | {
       type: "SELECT_TYPE_PERMIS";
       typePermis: TypePermis;
+    }
+  | {
+      type: "RELOAD_FICHE";
+      fiche: State;
     };
-type TypePermis = ">16" | ">18";
+export type TypePermis = ">16" | ">18";
 
 export interface State {
   age?: number;
